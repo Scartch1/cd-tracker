@@ -510,6 +510,23 @@ body.modal-open {
     margin-top: 2px;
 }
 
+/* Keep the roster compact: three complete student rows remain visible, then
+   the list scrolls independently instead of expanding into Recent Activity. */
+#studentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 180px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+}
+
+#studentsList .student-card {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+}
+
 .student-card {
     display: flex;
     align-items: center;
