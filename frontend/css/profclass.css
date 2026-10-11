@@ -323,6 +323,17 @@ body.modal-open {
 .students-title i,
 .activity-title i { color: var(--color-primary); font-size: 13px; }
 
+/* The activity list becomes independently scrollable after three cards.
+   Its height is calculated in professor-ux.js so card content can wrap
+   naturally without overlapping the rest of the dashboard. */
+#assignmentsList.has-scroll {
+    max-height: var(--assignment-list-max-height);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 8px;
+    scrollbar-gutter: stable;
+}
+
 /* ── Create Activity Button ───────────────────────────────────── */
 .create-activity-btn {
     background: white;
